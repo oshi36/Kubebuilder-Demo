@@ -1,0 +1,31 @@
+# permissions for end users to edit demoresources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: demoresource-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: project
+    app.kubernetes.io/part-of: project
+    app.kubernetes.io/managed-by: kustomize
+  name: demoresource-editor-role
+rules:
+- apiGroups:
+  - demo.demo.kcd.io
+  resources:
+  - demoresources
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - demo.demo.kcd.io
+  resources:
+  - demoresources/status
+  verbs:
+  - get

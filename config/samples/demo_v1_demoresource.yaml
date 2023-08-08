@@ -1,0 +1,8 @@
+apiVersion: demo.demo.kcd.io/v1
+kind: DemoResource
+metadata:
+  name: demoresource-sample
+spec:
+  # TODO(user): Add fields here
+  name: app
+  namespace: default
