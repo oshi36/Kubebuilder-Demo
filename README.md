@@ -1,6 +1,9 @@
 # Kubebuilder Demo
 This repository contains Kubebuilder demo which I presented at [Kubernetes Community Days Bengaluru 2023](https://community.cncf.io/events/details/cncf-kcd-bengaluru-presents-kubernetes-community-days-bengaluru-2023-in-person/). You can find the hands-on lab for this [here](https://cloudyuga.guru/hands_on_lab/kubebuilder-intro).
 
+[Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder) is a framework for building Kubernetes APIs using [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions).
+
+
 ## Description
 This demo consists of creating a custom resource and custom controller, which creates a pod based on some spec.
 ![demores_ctr_kubebuilder](https://github.com/oshi36/Kubebuilder-Demo/assets/47573417/f08d5206-6c94-46dd-b605-a9540557f3b1)
@@ -9,7 +12,14 @@ This demo consists of creating a custom resource and custom controller, which cr
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
 Also install [Go](https://go.dev/dl/) and [Kubebuilder](https://book.kubebuilder.io/quick-start.html) CLI.
+### Scaffolding of Project and Bootstrapping operator
+![kubebuilder_workflow](https://github.com/oshi36/Kubebuilder-Demo/assets/47573417/3d339b64-a502-4fb1-923c-7fb6593df564)
+- Create an empty directory and initialize it : `kubebuilder init --domain=demo.kcd.io --repo project`
+- Create API for CRDs , custom reosurce and controller : `kubebuilder create api --group demo --version v1 --kind DemoResource`
+- Define the custom resources and implement the custom controller logic.
 
+
+ 
 ### Running on the cluster
 1. Install Instances of Custom Resources:
 
