@@ -1,12 +1,14 @@
-# project
-// TODO(user): Add simple overview of use/purpose
+# Kubebuilder Demo
+This repository contains Kubebuilder demo which I presented at [Kubernetes Community Days Bengaluru 2023](https://community.cncf.io/events/details/cncf-kcd-bengaluru-presents-kubernetes-community-days-bengaluru-2023-in-person/). You can find the hands-on lab for this [here](https://cloudyuga.guru/hands_on_lab/kubebuilder-intro).
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+This demo consists of creating a custom resource and custom controller, which creates a pod based on some spec.
+![demores_ctr_kubebuilder](https://github.com/oshi36/Kubebuilder-Demo/assets/47573417/f08d5206-6c94-46dd-b605-a9540557f3b1)
 
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
+Also install [Go](https://go.dev/dl/) and [Kubebuilder](https://book.kubebuilder.io/quick-start.html) CLI.
 
 ### Running on the cluster
 1. Install Instances of Custom Resources:
